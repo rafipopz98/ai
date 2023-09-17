@@ -1,3 +1,4 @@
+import Leaderboard from "./components/leaderboard/Leaderboard";
 import Login from "./components/login/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
@@ -5,7 +6,8 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<Leaderboard />} />
         </Routes>
       </Router>
     </>

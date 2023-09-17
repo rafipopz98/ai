@@ -1,0 +1,45 @@
+.singletop {
+    display: flex;
+    padding: 20px;
+    /* align-items: center; */
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.one img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.detailsSingle {
+    padding: 0 20px;
+    display: flex;
+    color: #333;
+    align-items: self-start;
+    justify-content: space-between;
+}
+
+.totlikesHearts {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: max-content;
+}
+
+.paraSingle {
+    padding: 10px;
+    color: #555;
+    text-align: justify;
+    font-size: 0.7rem;
+}
