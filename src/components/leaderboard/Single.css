@@ -7,6 +7,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border-bottom: 1px solid#333;
+    /* padding-bottom: 0; */
+}
+.lead{
+    color: #333;
+    font-size: 1.2rem;
 }
 
 .one {
@@ -42,4 +48,7 @@
     color: #555;
     text-align: justify;
     font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    word-spacing: 0.4px;
+    line-height: 16px;
 }

@@ -37,6 +37,7 @@ const Leaderboard = () => {
         <div className="restAll">
           <div className="firstRow">
             <i className="bx bx-sort bx-md"></i>
+            <h2 className="lead">leaderboard</h2>
             <div className="iconsi">
               <i className="bx bx-chevron-down icons"></i>
               <i className="bx bx-chevron-up icons"></i>

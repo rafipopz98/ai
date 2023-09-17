@@ -41,7 +41,7 @@ const SingleTop = () => {
       name: "doe",
       likes: 20,
       prompt:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit.orem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iure in ",
+        "adipisicing elit. Asperiores iure in ",
     },
     {
       image: "https://picsum.photos/300/300",

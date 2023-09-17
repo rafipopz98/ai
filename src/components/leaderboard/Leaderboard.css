@@ -16,7 +16,7 @@
     min-height: 640px;
     height: max-content;
     background-color: #fff;
-    border-radius: 0.8rem;
+    border-radius: 0.1rem;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
 }
 
@@ -80,12 +80,16 @@
 
 .promtAns h5 {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    /* text-align: justify; */
 }
 
 .promtAns p {
     text-align: justify;
     font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    word-spacing: 0.4px;
+    line-height: 16px;
 }
 
 .likeBtn {
@@ -115,12 +119,14 @@
     padding-bottom: 2rem;
     overflow: hidden;
     transition: 0.8s ease-in-out;
+    padding-bottom: 0;
 
 }
 .firstRow{
+    border-bottom: 1px solid #555;
     padding: 20px;
     display: flex;
-    border-radius: 2.2rem;
+    border-radius: 0.2rem;
     /* border:0.02rem dashed black; */
     align-items: center;
     justify-content: space-between;
@@ -211,7 +217,11 @@
     .bx-md {
         font-size: 0.75rem!important;
     }
-   .tw0 p{
-    font-size: 0.2rem;
+   .two p{
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+   }
+   .lead{
+    display: none;
    }
 }
