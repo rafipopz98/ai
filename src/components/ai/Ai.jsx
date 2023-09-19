@@ -25,7 +25,7 @@ const Ai = () => {
   };
   return (
     <div className="ai">
-      <div className="aibox">
+      <div className="aibox"> 
         <div className="gr1"></div>
         <div className="gr2"></div>
         <div className="header">AppName</div>
