@@ -14,7 +14,7 @@ const AiInput = ({ sendMessage, loading }) => {
       {loading ? (
         <img src={loader} alt="" width={20} style={{ margin: "auto" }} />
       ) : (
-        <div>
+        <>
           <textarea
             onKeyDown={(e) => {
               e.keyCode === 13 && e.shiftKey === false && submitHandler();
