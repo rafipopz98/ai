@@ -19,7 +19,7 @@ const Ai = () => {
       ]),
   });
 
-  const sendMessage = async () => {
+  const sendMessage = async (message) => {
     await Promise.resolve(setChat((prev) => [...prev, message]));
     mutation.mutate();
   };
