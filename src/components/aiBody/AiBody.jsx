@@ -1,7 +1,19 @@
+import { useRef } from "react";
 import "./AiBody.css";
+import autoAnimate from "@formkit/auto-animate";
+import { useEffect } from "react";
 const AiBody = ({ chat }) => {
+  const parent = useRef(null);
+  const bottomRef = useRef(null);
+  useEffect(() => {
+    parent.current && autoAnimate(parent.current);
+  }, [parent]);
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chat]);
+
   return (
-    <div className="aiBody">
+    <div className="aiBody" ref={parent}>
       {/* clientMess */}
       {chat.map((message, i) => {
         return (
@@ -12,6 +24,7 @@ const AiBody = ({ chat }) => {
           </div>
         );
       })}
+      <div ref={bottomRef} style={{ height: "0.75rem" }}></div>
 
       {/* aiMsg */}
       {/* <div className="Div ai-style sty">
@@ -24,10 +37,9 @@ const AiBody = ({ chat }) => {
             }}
           >
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-              omnis, dolorum adipisci ratione odio vel repudiandae animi enim,
-              rem tempora magnam unde deleniti nihil suscipit aut eaque! Neque,
-              recusandae maiores.
+              {
+                message.
+              }
             </span>
             <button
               style={{

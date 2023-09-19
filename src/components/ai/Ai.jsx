@@ -33,7 +33,7 @@ const Ai = () => {
           <AiBody chat={chat} />
         </div>
         <div className="input">
-          <AiInput sendMessage={sendMessage} />
+          <AiInput sendMessage={sendMessage} loading={mutation.isLoading}/>
         </div>
       </div>
     </div>
