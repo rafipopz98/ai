@@ -1,4 +1,4 @@
-.aiInput{
+.aiInput {
     width: 100%;
     background-color: white;
     background-color: rgba(255, 255, 255, 0.295);
@@ -6,21 +6,25 @@
     max-height: 10rem;
     border-radius: 1rem;
     padding: 1rem;
+    overflow-x: hidden;
     overflow: auto;
     position: relative;
 }
-.textArea{
+
+.textArea {
     border: none;
     background-color: transparent;
     outline: none;
     width: 91%;
 }
-.sendButton{
+
+.sendButton {
     position: absolute;
     top: 1rem;
     right: 0.75rem;
 }
-.sendButton:hover{
+
+.sendButton:hover {
     cursor: pointer;
     transition-timing-function: ease-in;
     transition-duration: 0.1s;
