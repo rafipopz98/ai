@@ -36,13 +36,14 @@
     /* Add any other styling for AI messages here */
 }
 
-.ai-message div {
+.button-container  {
     display: flex;
     align-items: end;
+    justify-content: end;
     gap: 5px;
 }
 
-.ai-message button {
+.action-button {
     background: transparent;
     align-items: end;
     border: none;

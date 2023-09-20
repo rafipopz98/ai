@@ -85,14 +85,15 @@ const ChatBody = ({ chat }) => {
             className={`message ${message.sender === "ai" ? aiStyle : ""}`}
           >
             <pre className="message-content">
-              <div>
-                <span>{message.message}</span>
-                <button>
-                koko
-                  <i className="bx bx-like bx-sm"></i>
-                </button>
-              </div>
+              <span>{message.message}</span>
             </pre>
+            {message.sender === "ai" && (
+              <div className="button-container">
+                <button className="action-button"><i className="bx bx-like bx-xs"></i></button>
+                <button className="action-button"><i className="bx bx-share bx-xs"></i></button>
+                <button className="action-button"><i className="bx bx-bookmark bx-xs"></i></button>
+              </div>
+            )}
           </div>
         );
       })}
