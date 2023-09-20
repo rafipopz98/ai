@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./AiInput.css";
-import loader from "../../../public/loader.gif";
+import loader from "../../loader.gif";
 import send from "./send.png";
-const AiInput = ({ sendMessage, loading }) => {
+const AiInput = ({ sendMessage ,loading}) => {
   const [value, setValue] = useState("");
   const submitHandler = () => {
     if (value === "") return;

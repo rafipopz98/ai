@@ -1,0 +1,64 @@
+/* ChatBody.css */
+
+/* Styles for the chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* Adjust the gap as needed */
+    /* Add any other styling for the chat container here */
+    padding: 1rem;
+    height: 90%;
+}
+
+/* Styles for chat messages */
+.message {
+   
+    border: 2px solid #9999;
+    word-wrap: break-word;
+    border-width: 2px;
+    border-radius: 0.75rem;
+    align-self: flex-end;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 80%;
+}
+
+
+
+/* Styles for AI messages */
+.ai-message {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Adjust background color */
+    backdrop-filter: blur(10px);
+    /* Apply backdrop blur to AI messages */
+    margin-right: auto;
+    /* Add any other styling for AI messages here */
+}
+
+.ai-message div {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+}
+
+.ai-message button {
+    background: transparent;
+    align-items: end;
+    border: none;
+}
+
+/* Styles for message content */
+.message-content {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    white-space: pre-wrap;
+    /* Add any other styling for message content here */
+}
+
+/* Empty element for scrolling to the bottom */
+.scroll-to-bottom {
+    height: 0.75rem;
+    /* Set the desired height for scrolling indicator */
+    /* Add any other styling for scrolling indicator here */
+}

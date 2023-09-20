@@ -21,11 +21,11 @@ const Ai = () => {
 
   const sendMessage = async (message) => {
     await Promise.resolve(setChat((prev) => [...prev, message]));
-    mutation.mutate();
+    mutation.mutate(); 
   };
   return (
     <div className="ai">
-      <div className="aibox"> 
+      <div className="aibox">
         <div className="gr1"></div>
         <div className="gr2"></div>
         <div className="header">AppName</div>
@@ -33,7 +33,7 @@ const Ai = () => {
           <AiBody chat={chat} />
         </div>
         <div className="input">
-          <AiInput sendMessage={sendMessage} loading={mutation.isLoading}/>
+          <AiInput sendMessage={sendMessage} loading={mutation.isLoading} />
         </div>
       </div>
     </div>
