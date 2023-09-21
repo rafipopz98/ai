@@ -64,9 +64,9 @@
 }
 
 .bodyWrapper {
-    min-height: 500px;
-    height: 90%;
-    /* background-color: red; */
+    /* min-height: 500px; */
+    height: 97%;
+    background-color: red;
     overflow: auto;
     width: 100%;
     max-width: 70rem;
@@ -87,7 +87,8 @@
 .bodyWrapper::-webkit-scrollbar-track {
     background: transparent;
 }
-.input{
+
+.input {
     width: 100%;
     max-width: 60rem;
     min-width: 20rem;

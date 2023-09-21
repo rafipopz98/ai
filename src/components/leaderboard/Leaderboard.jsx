@@ -2,6 +2,7 @@ import "./Leaderboard.css";
 import img3 from "../login/image/image3.png";
 import { useState } from "react";
 import SingleTop from "./SingleTop";
+import { Link } from "react-router-dom";
 const Leaderboard = () => {
   const [like, setLike] = useState(10);
   const name = "rafi";
@@ -39,12 +40,17 @@ const Leaderboard = () => {
             <i className="bx bx-sort bx-md"></i>
             <h2 className="lead">leaderboard</h2>
             <div className="iconsi">
-              <i className="bx bx-chevron-down icons"></i>
-              <i className="bx bx-chevron-up icons"></i>
+              <Link to={"/"}>
+                <i className="bx bx-home icons"></i>
+              </Link>
+              <Link to={'/login'}>
+              <i className="bx bx-message-rounded-edit icons"></i>
+              </Link>
+              {/* <i className="bx bx-chevron-up icons"></i> */}
             </div>
           </div>
           <div className="topSignle">
-          <SingleTop />
+            <SingleTop />
           </div>
         </div>
       </div>
