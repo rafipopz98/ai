@@ -18,7 +18,7 @@
     /* position: relative; */
     width: 100%;
     max-width: 1340px;
-    height: 680px;
+    height: 90vh;
     background-color: #1A232E;
     border-radius: 3.3rem;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
@@ -66,7 +66,7 @@
 .bodyWrapper {
     /* min-height: 500px; */
     height: 97%;
-    background-color: red;
+    /* background-color: red; */
     overflow: auto;
     width: 100%;
     max-width: 70rem;

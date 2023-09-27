@@ -5,6 +5,8 @@ import img3 from "./image/image3.png";
 import "./Login.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { registerNewUser } from "../../../../ai-app-backend/services/register";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   useEffect(() => {
     const inputs = document.querySelectorAll(".input-field");
@@ -77,25 +79,27 @@ const Login = () => {
     });
   };
 
-  const loginHandler=(e)=>{
+  const loginHandler = (e) => {
     e.preventDefault();
-    console.log(loginData)
-  }
+    console.log(loginData);
+  };
+  const navigate = useNavigate();
 
-  const signUpHandler=(e)=>{
+  const signUpHandler = async (e) => {
     e.preventDefault();
-    console.log(signUpData)
-  }
-  
+    console.log(signUpData);
+    const data = await registerNewUser();
+    if (data.success) {
+      navigate("/ai");
+    }
+  };
 
   return (
     <main>
       <div className="box">
         <div className="inner-box">
           <div className="forms-wrap">
-            <form
-              className="sign-in-form"
-            >
+            <form className="sign-in-form">
               <div className="logo">
                 <img src={logo} alt="easyclassName" />
                 <h4>easyclassName</h4>
@@ -104,9 +108,9 @@ const Login = () => {
               <div className="heading">
                 <h2>Welcome Back</h2>
                 <h6>Not registred yet?</h6>
-                <Link  to={"/"} className="toggle">
+                <a href="#" className="toggle">
                   Sign up
-                </Link>
+                </a>
               </div>
 
               <div className="actual-form">
@@ -138,7 +142,12 @@ const Login = () => {
                   <label>Password</label>
                 </div>
 
-                <input onClick={loginHandler} type="submit" value="Sign In" className="sign-btn" />
+                <input
+                  onClick={loginHandler}
+                  type="submit"
+                  value="Sign In"
+                  className="sign-btn"
+                />
 
                 <p className="text">
                   Forgot
@@ -147,9 +156,7 @@ const Login = () => {
               </div>
             </form>
 
-            <form
-              className="sign-up-form"
-            >
+            <form className="sign-up-form">
               <div className="logo">
                 <img src={logo} alt="easyclassName" />
                 <h4>easyclassName</h4>
@@ -158,9 +165,9 @@ const Login = () => {
               <div className="heading">
                 <h2>Get Started</h2>
                 <h6>Already have an account?</h6>
-                <Link to={"/"} className="toggle">
+                <a href="#" className="toggle">
                   Sign in
-                </Link>
+                </a>
               </div>
 
               <div className="actual-form">
@@ -205,7 +212,12 @@ const Login = () => {
                   <label>Password</label>
                 </div>
 
-                <input onClick={signUpHandler} type="submit" value="Sign Up" className="sign-btn" />
+                <input
+                  onClick={signUpHandler}
+                  type="submit"
+                  value="Sign Up"
+                  className="sign-btn"
+                />
 
                 <p className="text">
                   By signing up, I agree to the

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./Single.css";
+import Modal from "../modal/Modal";
 const SingleTop = () => {
   const tempData = [
     {
@@ -40,8 +42,7 @@ const SingleTop = () => {
       image: "https://picsum.photos/240/240",
       name: "doe",
       likes: 20,
-      prompt:
-        "adipisicing elit. Asperiores iure in ",
+      prompt: "adipisicing elit. Asperiores iure in ",
     },
     {
       image: "https://picsum.photos/300/300",
@@ -51,10 +52,12 @@ const SingleTop = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iure inventore cum ntiente ipsam commodi cumque, repudiandae nesciunt?",
     },
   ];
+  
+  
   return (
     <>
       {tempData.map((item, key) => (
-        <div key={key} className="singletop">
+        <div key={key} className="singletop"  >
           <div className="one">
             <img src={item.image} alt="" />
           </div>
@@ -68,6 +71,7 @@ const SingleTop = () => {
             </div>
             <p className="paraSingle">{item.prompt}</p>
           </div>
+          
         </div>
       ))}
     </>

@@ -1,0 +1,98 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: grid;
+    top: 0;
+    left: 0;
+    /* align-items: center; */
+    /* justify-content: center; */
+    place-items: center;
+    background: #ff8c6b;
+    overflow: auto;
+    backdrop-filter: blur(200px);
+}
+
+.modal .mCard {
+    background-color: white;
+    width: 80rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.modal .mCard #close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.4rem;
+}
+
+.modal .mCard .mBrand {
+    width: 30rem;
+    height: 30rem;
+    flex: 1;
+}
+
+.modal .mCard .mBrand img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12%;
+}
+
+.modal .mCard h2 {
+    margin-bottom: 2rem;
+}
+
+.mInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.mInfo h2 {
+    text-align: center;
+}
+
+.mInfo p {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:800px) {
+    .modal .mCard {
+        flex-direction: column;
+        width: 80vw;
+        text-align: center;
+    }
+
+    .modal .mCard .mBrand {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .mInfo p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .mInfo p {
+        font-size: 0.5rem;
+    }
+
+    .modal .mCard .mBrand {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}

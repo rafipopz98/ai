@@ -3,9 +3,11 @@ import img3 from "../login/image/image3.png";
 import { useState } from "react";
 import SingleTop from "./SingleTop";
 import { Link } from "react-router-dom";
+import Modal from "../modal/Modal";
 const Leaderboard = () => {
   const [like, setLike] = useState(10);
   const name = "rafi";
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="leaderboard">
       <div className="card">
@@ -43,15 +45,20 @@ const Leaderboard = () => {
               <Link to={"/"}>
                 <i className="bx bx-home icons"></i>
               </Link>
-              <Link to={'/login'}>
-              <i className="bx bx-message-rounded-edit icons"></i>
+              <Link to={"/login"}>
+                <i className="bx bx-message-rounded-edit icons"></i>
               </Link>
               {/* <i className="bx bx-chevron-up icons"></i> */}
             </div>
           </div>
-          <div className="topSignle">
+          <div className="topSignle" onClick={() => setIsOpen(!isOpen)}>
             <SingleTop />
           </div>
+          {isOpen ? (
+            <div onClick={() => setIsOpen(!isOpen)}>
+              <Modal />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

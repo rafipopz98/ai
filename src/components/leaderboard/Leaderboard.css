@@ -1,7 +1,7 @@
 .leaderboard {
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     background-color: #ff8c6b;
     padding: 2rem;
     display: flex;
@@ -12,8 +12,8 @@
 .card {
     position: relative;
     width: 100%;
-    max-width: 1020px;
-    min-height: 640px;
+    max-width: 1250px;
+    min-height: 720px;
     height: max-content;
     background-color: #fff;
     border-radius: 0.1rem;
