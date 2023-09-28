@@ -29,6 +29,8 @@
 }
 
 .header {
+    display:flex;
+    justify-content: space-around;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5rem;
@@ -62,7 +64,15 @@
     filter: blur(190px);
 
 }
+.ic{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
 
+.bx{
+    cursor: pointer;
+}
 .bodyWrapper {
     /* min-height: 500px; */
     height: 97%;

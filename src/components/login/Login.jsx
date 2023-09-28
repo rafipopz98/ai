@@ -5,7 +5,9 @@ import img3 from "./image/image3.png";
 import "./Login.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { registerNewUser } from "../../../../ai-app-backend/services/register";
+import axios from "axios";
+// import { registerNewUser } from "../../../../ai-app-backend/services/register";
+
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   useEffect(() => {
@@ -82,15 +84,26 @@ const Login = () => {
   const loginHandler = (e) => {
     e.preventDefault();
     console.log(loginData);
+    axios.post("http://localhost:8080/Login", loginData).then((res) => {
+      navigate("/ai");
+      localStorage.setItem("user", JSON.stringify(loginData));
+      console.log(loginData, "response daytat");
+    });
   };
   const navigate = useNavigate();
 
   const signUpHandler = async (e) => {
     e.preventDefault();
     console.log(signUpData);
-    const data = await registerNewUser();
-    if (data.success) {
-      navigate("/ai");
+    const { name, email, password } = signUpData;
+    if (name && email && password) {
+      axios.post("http://localhost:8080/register", signUpData).then((res) => {
+        navigate("/ai");
+        localStorage.setItem("user", JSON.stringify(signUpData));
+        console.log(signUpData, "response daytat");
+      });
+    } else {
+      alert("invalid input");
     }
   };
 
