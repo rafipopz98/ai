@@ -3,7 +3,8 @@ import autoAnimate from "@formkit/auto-animate";
 import { useRef, useEffect, useContext } from "react";
 import "./ChatBody.css";
 import { GlobalContext } from "../../context";
-const ChatBody = ({ chat }) => {
+import axios from "axios";
+const ChatBody = ({ chat, saveMsg }) => {
   const aiStyle = "ai-message";
 
   const parent = useRef(null);
@@ -15,11 +16,15 @@ const ChatBody = ({ chat }) => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chat]);
 
-  const msg=localStorage.getItem("message")
-  // console.log(chat)
+  const msg = localStorage.getItem("message");
 
-//  const {qstn}=useContext(GlobalContext)
-//  console.log(qstn,"recent qstn")  
+  const saveHandler = () => {
+    saveMsg(chat);
+  };
+
+  const rec = JSON.parse(localStorage.getItem("recentMsg"));
+  console.log(rec.message);
+  
 
   return (
     <div className="chat-container" ref={parent}>
@@ -30,13 +35,7 @@ const ChatBody = ({ chat }) => {
             className={`message ${message.sender === "ai" ? aiStyle : ""}`}
           >
             <pre className="message-content">
-
-            {/* {
-              message.sender==="ai" && (
-               `Q : ${}`
-              )
-            } */}
-            
+              {/* {message.sender === "ai" && `Q : ${rec.message}\n`} */}
               <span>{message.message}</span>
             </pre>
             {message.sender === "ai" && (
@@ -48,7 +47,7 @@ const ChatBody = ({ chat }) => {
                   <i className="bx bx-share bx-xs"></i>
                 </button>
                 <button className="action-button">
-                  <i className="bx bx-bookmark bx-xs"></i>
+                  <i onClick={saveHandler} className="bx bx-bookmark bx-xs"></i>
                 </button>
               </div>
             )}

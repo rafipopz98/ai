@@ -5,6 +5,7 @@ import "./Ai.css";
 import { useMutation } from "react-query";
 import { fetchResponse } from "../../api";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Ai = () => {
   const [chat, setChat] = useState([]);
@@ -46,6 +47,14 @@ const Ai = () => {
 
   console.log(recentMsg, "l");
 
+  const saveMsg=(chat)=>{
+    console.log("saved")
+    axios.post("http://localhost:8080/save").then((res) => {
+      alert(res);
+      console.log(res)
+    });
+  }
+
   return (
     <div className="ai">
       <div className="aibox">
@@ -67,7 +76,7 @@ const Ai = () => {
           </div>
         </div>
         <div className="bodyWrapper">
-          <AiBody chat={chat} />
+          <AiBody chat={chat} saveMsg={saveMsg}/>
         </div>
         <div className="input">
           <AiInput sendMessage={sendMessage} loading={mutation.isLoading} />
